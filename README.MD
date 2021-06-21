@@ -9,4 +9,4 @@ The app splits the page text into individual words using a list of delimiters: {
 
 The project is implemented using java core.
 
-In the future, it is planned to add the JSOUP and JUNIT libraries, and implement data saving to the database.
+In the future, it is planned to add the JSOUP, log4j and JUNIT libraries, and implement data saving to the database.
