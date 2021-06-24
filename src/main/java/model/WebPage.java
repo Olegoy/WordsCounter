@@ -46,4 +46,12 @@ public class WebPage {
     public int hashCode() {
         return Objects.hash(name, id);
     }
+
+    @Override
+    public String toString() {
+        return "WebPage{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

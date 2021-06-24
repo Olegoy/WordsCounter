@@ -1,4 +1,5 @@
 import controller.Controller;
+import controller.ControllerImpl;
 import model.WebPage;
 import view.ConsoleView;
 import view.View;
@@ -27,12 +28,14 @@ public class WordsCounterApp {
 
         WebPage webPage = new WebPage();
         View view = new ConsoleView();
-        Controller controller = new Controller(view, webPage);
-        controller.setModelName(controller.inputUrl());
+        Controller controller = new ControllerImpl(view, webPage);
+
+        controller.setModelName(controller.downloadFile(controller.getUrl()).getName());
         controller.setModelUniqueWords();
         controller.showWordsStatistic(controller.getModelName());
-//        System.out.println(webPage.getName());
+
         logger.log(Level.INFO, "App_the end");
+
     }
 
 }
